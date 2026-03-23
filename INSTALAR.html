@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GuÃ­a de InstalaciÃ³n â Azkar PWA</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Barlow',sans-serif;background:#E2E7EF;color:#111;line-height:1.7;padding:20px}
+.container{max-width:800px;margin:0 auto}
+h1{font-family:'Barlow Condensed',sans-serif;font-size:28px;color:#1B4F8A;margin-bottom:6px}
+.subtitle{color:#888;font-size:14px;margin-bottom:30px}
+.card{background:#fff;border-radius:10px;padding:24px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.card h2{font-size:16px;color:#1B4F8A;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.card h2 .num{background:#E85C0D;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800}
+.step{margin-bottom:10px;padding-left:8px}
+.code{background:#1B4F8A;color:#D6E4F7;padding:14px 18px;border-radius:6px;font-family:monospace;font-size:13px;margin:10px 0;overflow-x:auto;white-space:pre-wrap}
+.badge{display:inline-block;padding:3px 10px;border-radius:4px;font-size:11px;font-weight:700;margin-right:6px}
+.badge.win{background:#0078D4;color:#fff}
+.badge.and{background:#3DDC84;color:#111}
+.badge.free{background:#1a7a3f;color:#fff}
+.tip{background:#FEF0E7;border-left:4px solid #E85C0D;padding:12px 16px;border-radius:0 6px 6px 0;margin:12px 0;font-size:13px}
+.tip b{color:#E85C0D}
+a{color:#2376C5}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>ð Azkar Mudanzas â GuÃ­a de InstalaciÃ³n PWA</h1>
+<p class="subtitle">Tu app de gestiÃ³n de presupuestos en Windows y Android</p>
+
+<div class="card">
+<h2><span class="num">0</span> Â¿QuÃ© incluye este paquete?</h2>
+<div class="step">
+<b>index.html</b> â La aplicaciÃ³n completa<br>
+<b>manifest.json</b> â ConfiguraciÃ³n PWA<br>
+<b>sw.js</b> â Service Worker (funciona offline)<br>
+<b>icons/</b> â Iconos para todas las plataformas<br>
+<b>INSTALAR.html</b> â Esta guÃ­a
+</div>
+</div>
+
+<div class="card">
+<h2><span class="num">1</span> Subir a un servidor web (obligatorio para PWA)</h2>
+<div class="step">
+La PWA necesita servirse desde HTTPS. Tienes varias opciones <span class="badge free">GRATIS</span>:
+</div>
+
+<div class="step">
+<b>OpciÃ³n A: GitHub Pages</b> (recomendada, gratis)
+<div class="code">1. Crea una cuenta en github.com (si no tienes)
+2. Crea un repositorio nuevo llamado "azkar-app"
+3. Sube todos los archivos de esta carpeta
+4. Ve a Settings â Pages â Source: "main" â Save
+5. Tu app estarÃ¡ en: https://tuusuario.github.io/azkar-app/</div>
+</div>
+
+<div class="step">
+<b>OpciÃ³n B: Netlify</b> (gratis, mÃ¡s fÃ¡cil)
+<div class="code">1. Ve a netlify.com y crea cuenta
+2. Arrastra la carpeta "azkar-pwa" completa al panel
+3. Â¡Listo! Te da una URL tipo: https://azkar-xxx.netlify.app</div>
+</div>
+
+<div class="step">
+<b>OpciÃ³n C: Firebase Hosting</b> (gratis)
+<div class="code">npm install -g firebase-tools
+firebase login
+firebase init hosting
+firebase deploy</div>
+</div>
+
+<div class="step">
+<b>OpciÃ³n D: Servidor local para probar</b>
+<div class="code">python -m http.server 8080
+# Abre http://localhost:8080 en Chrome</div>
+</div>
+</div>
+
+<div class="card">
+<h2><span class="num">2</span> Instalar en Windows <span class="badge win">WINDOWS</span></h2>
+<div class="step">
+Una vez la app estÃ¡ en un servidor HTTPS:
+<div class="code">1. Abre Chrome/Edge y ve a tu URL
+2. VerÃ¡s el banner "Instalar Azkar Mudanzas" abajo
+3. Pulsa "INSTALAR"
+4. Â¡Listo! AparecerÃ¡ en tu escritorio y menÃº inicio
+
+Alternativa: Click en el icono â en la barra de Chrome
+O en Edge: Â·Â·Â· â Aplicaciones â Instalar este sitio</div>
+</div>
+<div class="tip"><b>Tip:</b> En Edge tambiÃ©n puedes ir a edge://apps para gestionar tus PWAs instaladas.</div>
+</div>
+
+<div class="card">
+<h2><span class="num">3</span> Instalar en Android <span class="badge and">ANDROID</span></h2>
+<div class="step">
+<div class="code">1. Abre Chrome en tu Android y ve a tu URL
+2. VerÃ¡s el banner "Instalar Azkar Mudanzas"
+3. Pulsa "INSTALAR" (o "AÃ±adir a pantalla de inicio")
+4. Â¡Listo! AparecerÃ¡ como app en tu telÃ©fono
+
+Alternativa: Chrome â â® â "Instalar aplicaciÃ³n"
+O: Chrome â â® â "AÃ±adir a pantalla de inicio"</div>
+</div>
+<div class="tip"><b>Tip:</b> En Samsung Internet tambiÃ©n funciona: â° â AÃ±adir pÃ¡gina a â Pantalla de inicio.</div>
+</div>
+
+<div class="card">
+<h2><span class="num">4</span> Configurar sincronizaciÃ³n Firebase (opcional)</h2>
+<div class="step">
+Para que los presupuestos se sincronicen entre tu PC y tu mÃ³vil:
+<div class="code">1. Ve a https://console.firebase.google.com
+2. Crea un proyecto nuevo (nombre: "azkar-app")
+3. Ve a Firestore Database â Crear base de datos â Modo test
+4. Ve a ConfiguraciÃ³n del proyecto â Tus apps â Web (</>)
+5. Registra la app y copia los datos de configuraciÃ³n
+6. En la app Azkar: ð MIS PRESUPUESTOS â âï¸ Configurar Firebase
+7. Pega los datos y pulsa "Conectar"</div>
+</div>
+<div class="tip"><b>Importante:</b> Usa el mismo proyecto Firebase en todos tus dispositivos. Los datos se sincronizan en tiempo real automÃ¡ticamente.</div>
+</div>
+
+<div class="card">
+<h2><span class="num">5</span> Funcionalidades de la App</h2>
+<div class="step">
+<b>ð Mis Presupuestos:</b> Gestiona todos tus presupuestos guardados. BotÃ³n en la barra superior.<br><br>
+<b>ð¾ Guardado automÃ¡tico:</b> Se guarda automÃ¡ticamente cada 60 segundos mientras trabajas.<br><br>
+<b>â¡ Modo offline:</b> Funciona sin conexiÃ³n. Los cambios se sincronizan al volver a estar online.<br><br>
+<b>âï¸ SincronizaciÃ³n:</b> Con Firebase activado, los presupuestos aparecen en todos tus dispositivos al instante.<br><br>
+<b>ð¨ï¸ Exportar PDF:</b> Usa el botÃ³n "IMPRIMIR PDF" para generar documentos para el cliente.
+</div>
+</div>
+
+<div class="card" style="background:linear-gradient(135deg,#1B4F8A,#2376C5);color:#fff;">
+<h2 style="color:#fff;">ð Â¡Todo listo!</h2>
+<div class="step" style="opacity:.9;">
+Tu aplicaciÃ³n Azkar Mudanzas funciona como app nativa en Windows y Android.
+Sin tiendas de apps, sin actualizaciones manuales â cualquier cambio que hagas
+en el servidor se actualiza automÃ¡ticamente en todos los dispositivos.
+</div>
+</div>
+
+</div>
+</body>
+</html>
