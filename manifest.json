@@ -1,13 +1,13 @@
 {
-  "name": "Azkar Mudanzas - Gestión de Presupuestos (DEV)",
-  "short_name": "Azkar DEV",
+  "name": "AZKAR PROYECTO - Entorno de Pruebas",
+  "short_name": "PROYECTO",
   "description": "Aplicación de gestión de presupuestos - Entorno de desarrollo y pruebas",
   "start_url": "/azkar-app-dev/",
   "scope": "/azkar-app-dev/",
   "id": "/azkar-app-dev/",
   "display": "standalone",
-  "background_color": "#1B4F8A",
-  "theme_color": "#1B4F8A",
+  "background_color": "#FF6600",
+  "theme_color": "#FF6600",
   "orientation": "any",
   "categories": [
     "business",
